@@ -43,10 +43,12 @@ The phylogenetic signals within a given dataset was studied using the maximum-li
 #SBATCH --mail-type=END,FAIL    #Mail events (NONE, BEGIN, END, FAIL, ALL)
 
 cd $SLURM_SUBMIT_DIR
-ml load  IQ-TREE/1.6.12-foss-2022a
 
-iqtree -s H5_AL1.fasta -m MFP
+ml load IQ-TREE/2.2.2.6-gompi-2022a
+iqtree2 -s H5_Aligned_EU2.fasta -m GTR+I+G
 
+# ml load  IQ-TREE/1.6.12-foss-2022a
+# iqtree -s H5_AL1.fasta -m MFP
 # iqtree -s H5_Aligned_EU2.fasta -m GTR+I+G
 ```
 
