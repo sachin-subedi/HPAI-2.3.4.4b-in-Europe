@@ -3,13 +3,12 @@ Highly Pathogenic Avian Influenza 2.3.4.4b in Europe
 
 ## Project Objective:
 
-- To examine spillover to domestic animals (poultry and domestic mammals -swine, cow, horse, dog, cat and others) and wild mammals (bear, whales, seals, seals etc).
+- To examine Highly Pathogenic Avian Influenza spillover to domestic animals (poultry and domestic mammals -swine, cow, horse, dog, cat and others) and wild mammals (bear, whales, seals, seals etc) in Europe.
   
 ## Steps
 
 ### Preparation and Cleaning
-- Five thousand eight hundred and ninety complete sequences of the HA genes from Influenza Virus A(H5Nx) identified in all species in Europe between January 1, 2016, and May 7, 2024, were retrieved from the GISAID genome database. The HA gene was selected due to its external position on the viral particle, its involvement in the virus and host cell interaction, and its prominence as the primary focus of the body's antibody defense mechanism.
-
+- Five thousand eight hundred and ninety complete sequences of the HA genes from Influenza Virus A(H5Nx) identified in all species in Europe between January 1, 2016, and May 7, 2024, were retrieved from the GISAID genome database.
 ### Host categorization and species grouping:
 - Different bird and species were categorized as Wild and domestic animals. We had  included sequence data that were collected from human, environment and laboratory.
 
