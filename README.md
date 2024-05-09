@@ -9,7 +9,6 @@ Highly Pathogenic Avian Influenza 2.3.4.4b in Europe
 
 ### Preparation and Cleaning
 - Five thousand eight hundred and ninety complete sequences of the HA genes from Influenza Virus A(H5Nx) identified in all species in Europe between January 1, 2016, and May 7, 2024, were retrieved from the GISAID genome database. The HA gene was selected due to its external position on the viral particle, its involvement in the virus and host cell interaction, and its prominence as the primary focus of the body's antibody defense mechanism.
-- Duplicates in datasets were removed
 
 ### Host categorization and species grouping:
 - Different bird and species were categorized as Wild and domestic animals. We had  included sequence data that were collected from human, environment and laboratory.
@@ -23,7 +22,7 @@ Highly Pathogenic Avian Influenza 2.3.4.4b in Europe
 
 ### Seqequence Alignment
 - Sequences of each genome segment were aligned using MAFFT in Seqotron
-- 
+  
 ### Maximum Likelihood Tree
 The phylogenetic signals within a given dataset was studied using the maximum-likelihood method in IQ-tree.
 
