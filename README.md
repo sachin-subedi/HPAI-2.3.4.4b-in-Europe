@@ -46,5 +46,7 @@ cd $SLURM_SUBMIT_DIR
 ml load  IQ-TREE/1.6.12-foss-2022a
 
 iqtree -s H5_AL1.fasta -m MFP
+
+# iqtree -s H5_Aligned_EU2.fasta -m GTR+I+G
 ```
 
