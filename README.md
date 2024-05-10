@@ -23,7 +23,7 @@ Highly Pathogenic Avian Influenza 2.3.4.4b in Europe
 - Sequences of each genome segment were aligned using MAFFT in Seqotron
   
 ### Maximum Likelihood Tree
-The phylogenetic signals within a given dataset was studied using the maximum-likelihood method in IQ-tree.
+The phylogenetic signals within a given dataset was studied using the maximum-likelihood method in IQ-tree. The outlier was removed.
 
 ```bash
 #!/bin/bash
@@ -51,4 +51,40 @@ iqtree2 -s H5_Aligned_EU2.fasta -m GTR+I+G
 # iqtree -s H5_AL1.fasta -m MFP
 # iqtree -s H5_Aligned_EU2.fasta -m GTR+I+G
 ```
+### Setting BEAUTi
+- Dates were parsed.
+- Four traits were created namely, Host_Category, Host_Names, Subtype and Country.
+- GTR gamma model was selected for default values and Symmetric substitution model for all other traits.
+- Uncorrelated relaxed clock and lognormal distribution with continuous quantile parameterization was done with default data. Strict clock was selected for all other traits.
+- For tree models, Coalescent: GMRF Bayesian Skyride was selected.
+- Ancestral states and state change counts were reconstructed.
+- For priors with initial = 0.0033 with uniform distribution from 0 to 1.
+- MCMC Chain length of 100000000 was selected and xml file was generated for beast run.
+
+### BEAST run
+```bash
+#!/bin/bash
+#SBATCH --job-name=beast_EU
+#SBATCH --partition=bahl_p
+#SBATCH --nodes=4
+#SBATCH --ntasks=16
+#SBATCH --ntasks-per-node=16
+#SBATCH --cpus-per-task=2   
+#SBATCH --mem=120G
+#SBATCH --time=7-00:00:00
+#SBATCH --output=log.%j.out
+#SBATCH --error=log.%j.err
+#SBATCH --mail-user=ss11645@uga.edu  
+#SBATCH --mail-type=END,FAIL
+
+cd $SLURM_SUBMIT_DIR
+
+ml load Beast/1.10.4-GCC-11.3.0
+beast -threads 4 -beagle -beagle_SSE -overwrite EU_H5_Aligned_Outlier.xml
+```
+
+
+
+
+
 
