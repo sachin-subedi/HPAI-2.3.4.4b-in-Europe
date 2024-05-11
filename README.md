@@ -52,6 +52,17 @@ iqtree2 -s H5_Aligned_EU2.fasta -m GTR+I+G
 # iqtree -s H5_Aligned_EU2.fasta -m GTR+I+G
 ```
 ### Setting BEAUTi
+#### Run1:
+- Dates were parsed.
+- Four traits were created namely, Host_Category, Host_Names, Subtype and Country.
+- GTR gamma model was selected for default values and Symmetric substitution model for all other traits.
+- Uncorrelated relaxed clock and lognormal distribution with continuous quantile parameterization was done with default data. Strict clock was selected for all other traits.
+- For tree models, Coalescent: GMRF Bayesian Skyride was selected.
+- Ancestral states and state change counts were reconstructed.
+- For priors with initial = 0.0033 with uniform distribution from 0 to 1.
+- MCMC Chain length of 100000000 was selected and xml file was generated for beast run.
+
+#### Run2:
 - Dates were parsed.
 - Four traits were created namely, Host_Category, Host_Names, Subtype and Country.
 - GTR gamma model was selected for default values and Unsymmetric substitution model for all other traits. Infer scocial networls for BSSVS was selected.
@@ -60,6 +71,17 @@ iqtree2 -s H5_Aligned_EU2.fasta -m GTR+I+G
 - Ancestral states and state change counts were reconstructed.
 - For priors with initial = 0.0033 with uniform distribution from 0 to 1.
 - MCMC Chain length of 100000000 was selected and xml file was generated for beast run.
+
+#### Run3:
+- Dates were parsed.
+- Four traits were created namely, Host_Category, Host_Names, Subtype and Country.
+- GTR gamma model was selected for default values and Unsymmetric substitution model for all other traits. Infer scocial networls for BSSVS was selected.
+- Uncorrelated relaxed clock and lognormal distribution with continuous quantile parameterization was done with default data. Strict clock was selected for all other traits.
+- For tree models, Coalescent: GMRF Bayesian Skyride was selected.
+- Ancestral states and state change counts were reconstructed.
+- For priors with initial = 0.0033 with uniform distribution from 0 to 1.
+- MCMC Chain length of 100000000 was selected and xml file was generated for beast run.
+
 
 ### BEAST run
 ```bash
