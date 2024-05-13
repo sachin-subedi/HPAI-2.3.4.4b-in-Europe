@@ -82,6 +82,15 @@ iqtree2 -s H5_Aligned_EU2.fasta -m GTR+I+G
 - For priors with initial = 0.0033 with uniform distribution from 0 to 1.
 - MCMC Chain length of 100000000 was selected and xml file was generated for beast run.
 
+### Run4
+- Dates were parsed.
+- Four traits were created namely, Host_Category, Host_Names, Subtype and Country.
+- HKY estimated model was selected for default values and Unsymmetric substitution model for all other traits. Infer scocial networls for BSSVS was selected.
+- Uncorrelated relaxed clock and lognormal distribution with continuous quantile parameterization was done with default data. Strict clock was selected for all other traits.
+- For tree models, Coalescent: GMRF Bayesian Skyride was selected.
+- Ancestral states and state change counts were reconstructed.
+- For priors with initial = 0.0033 with lognormal distribution with mean 0.0033, standard deviation 0.01 and offset 0.0.
+- MCMC Chain length of 100000000 was selected and xml file was generated for beast run.
 
 ### BEAST run
 ```bash
@@ -104,6 +113,9 @@ cd $SLURM_SUBMIT_DIR
 ml load Beast/1.10.4-GCC-11.3.0
 beast -threads 4 -beagle -beagle_SSE -overwrite xx.xml
 ```
+
+
+
 
 
 
