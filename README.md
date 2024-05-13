@@ -119,7 +119,7 @@ beast -threads 4 -beagle -beagle_SSE -overwrite xx.xml
 ```bash
 #!/bin/bash
 #SBATCH --job-name=beast_GPU
-#SBATCH --partition=bahl_p
+#SBATCH --partition=gpu_p
 #SBATCH --gres=gpu:A100:1
 #SBATCH --nodes=4
 #SBATCH --ntasks=1
@@ -135,7 +135,7 @@ beast -threads 4 -beagle -beagle_SSE -overwrite xx.xml
 cd $SLURM_SUBMIT_DIR
 
 ml load Beast/1.10.4-GCC-11.3.0-CUDA-11.4.1
-beast -threads auto -beagle -beagle_SSE -overwrite xx.xml
+beast -beagle -beagle_SSE -overwrite xx.xml
 ```
 
 
