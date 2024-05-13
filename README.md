@@ -92,7 +92,7 @@ iqtree2 -s H5_Aligned_EU2.fasta -m GTR+I+G
 - For priors with initial = 0.0033 with lognormal distribution with mean 0.0033, standard deviation 0.01 and offset 0.0.
 - MCMC Chain length of 100000000 was selected and xml file was generated for beast run.
 
-### BEAST run
+### BEAST run (non-GPU)
 ```bash
 #!/bin/bash
 #SBATCH --job-name=beast_EU
@@ -115,7 +115,28 @@ beast -threads 4 -beagle -beagle_SSE -overwrite xx.xml
 ```
 
 
+### BEAST run (GPU)
+```bash
+#!/bin/bash
+#SBATCH --job-name=beast_GPU
+#SBATCH --partition=bahl_p
+#SBATCH --gres=gpu:A100:1
+#SBATCH --nodes=4
+#SBATCH --ntasks=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --cpus-per-task=8  
+#SBATCH --mem=200G
+#SBATCH --time=7-00:00:00
+#SBATCH --output=log.%j.out
+#SBATCH --error=log.%j.err
+#SBATCH --mail-user=xx12345@uga.edu  
+#SBATCH --mail-type=END,FAIL
 
+cd $SLURM_SUBMIT_DIR
+
+ml load Beast/1.10.4-GCC-11.3.0-CUDA-11.4.1
+beast -threads auto -beagle -beagle_SSE -overwrite xx.xml
+```
 
 
 
