@@ -25,6 +25,12 @@ Highly Pathogenic Avian Influenza 2.3.4.4b in Europe
 ### Maximum Likelihood Tree
 The phylogenetic signals within a given dataset was studied using the maximum-likelihood method in IQ-tree. The outlier was removed.
 
+### TreeTime
+
+```bash
+treetime --sequence-length 1712 --tree /Users/sachinsubedi/Desktop/Treetime/may22/tree.nwk --dates /Users/sachinsubedi/Desktop/Treetime/may22/metadata1.csv --clock-filter 3.0 --reroot ML
+```
+
 ```bash
 #!/bin/bash
 
